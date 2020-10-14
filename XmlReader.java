@@ -3,16 +3,16 @@ import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 import java.util.ArrayList;
 
-// No changes are required for this class
-
+// Reads the input XML file
 public class XmlReader {
+
     private final String inputFileName;
     private XmlHandler myXmlHandler = null;
-    private ArrayList<Customer> customers;
 
+    //Tries to parse XML
     public XmlReader(String inputFileName) {
         this.inputFileName = inputFileName;
-
+        
         try {
             // Declare a File object
             File inputFile = new File(inputFileName);

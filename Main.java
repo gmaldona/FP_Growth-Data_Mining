@@ -8,7 +8,7 @@ public class Main {
 
         ArrayList<Customer> customers = reader.getCustomers();
 
-        customers.get(0).getTransaction("27-05-2015");
+        System.out.println(customers.size());
 
     }
 
