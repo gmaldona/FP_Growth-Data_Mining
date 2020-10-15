@@ -80,6 +80,25 @@ def parseXML(DATABASE: dict):
     
     '''
     
+    # Alls the receipts for a customer
+    receipts = {}
+    
+    for key in DATABASE.keys(): 
+        receipts[key] = {}
+        purchases = {}
+        
+        for purchase in DATABASE[key]:
+            if purchases.__contains__(purchase[0]) == False:
+                purchases[purchase[0]] = []
+            purchases[purchase[0]].append(purchase[1]) 
+            
+        receipts[key] = purchases
+        
+    print(receipts)
+        
+        
+     
+    
     # Root Tag
     CustomersTag = ET.Element('Customers')
     
@@ -91,10 +110,12 @@ def parseXML(DATABASE: dict):
         IDTag = ET.SubElement(CustomerTag, 'ID member_id="{}"'.format(key))
         # Creates a Receipts tag to house all of the transactions that member_ID processed
         ReceiptsTag = ET.SubElement(CustomerTag, 'Receipts')
-        # FOr each transaction for that member ID, a receipt tag needs to be created
-        for transaction in DATABASE.get(key):
-            # Creates a Receipt tag for each transaction processed
-            ReceiptTag = ET.SubElement(ReceiptsTag, 'Receipt date="{}" item="{}"'.format(transaction[0], transaction[1]))
+        for date in receipts.get(key).keys():
+            ReceiptTag = ET.SubElement(ReceiptsTag, 'Receipt')
+            DateTag = ET.SubElement(ReceiptTag, 'Date date="{}"'.format(date))
+            
+            for item in receipts.get(key).get(date):
+                itemTag = ET.SubElement(ReceiptTag, 'Item item="{}"'.format(item))
         
     # Creates the XML structure    
     tree = ET.tostring(CustomersTag)
@@ -105,6 +126,6 @@ def parseXML(DATABASE: dict):
 
 if __name__ == '__main__':
     Database, member_IDs = getDB()
-    Database = sortDB(Database, member_IDs)
+    Database = sortDB((Database, member_IDs))
     parseXML(Database)
     print('Finished.')

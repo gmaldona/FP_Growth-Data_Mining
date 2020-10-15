@@ -8,7 +8,7 @@ public class Main {
 
         ArrayList<Customer> customers = reader.getCustomers();
 
-        System.out.println(customers.size());
+        System.out.println(customers.get(420).getAllTransactions());
 
     }
 
