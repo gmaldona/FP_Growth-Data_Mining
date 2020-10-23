@@ -122,7 +122,9 @@ def parseXML(DATABASE: dict):
     # Writes to the XML file
     xmlFile = open('Transactions.xml', 'w')
     xmlFile.write(str(tree))
-    
+
+def getAllItems(data: ()):
+      
 
 if __name__ == '__main__':
     Database, member_IDs = getDB()
