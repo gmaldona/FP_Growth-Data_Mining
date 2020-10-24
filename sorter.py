@@ -93,12 +93,8 @@ def parseXML(DATABASE: dict):
             purchases[purchase[0]].append(purchase[1]) 
             
         receipts[key] = purchases
-        
-    print(receipts)
-        
-        
-     
-    
+
+
     # Root Tag
     CustomersTag = ET.Element('Customers')
     
@@ -122,8 +118,6 @@ def parseXML(DATABASE: dict):
     # Writes to the XML file
     xmlFile = open('Transactions.xml', 'w')
     xmlFile.write(str(tree))
-
-def getAllItems(data: ()):
       
 
 if __name__ == '__main__':
