@@ -152,4 +152,10 @@ public class Transactions {
             System.out.println();
         }  
     }
+
+    // Method that returns the total amount of transactions
+    public int size() { return this.transactionListInBinary.size(); }
+
+    //Method that returns the item representation in binary for the mining
+    public ArrayList<Integer[]> get() { return this.transactionListInBinary; }
 }
