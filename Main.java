@@ -1,4 +1,6 @@
 import java.util.ArrayList; 
+import java.util.List;
+import java.util.Collections;
 
 public class Main { 
 
@@ -20,28 +22,37 @@ public class Main {
         
         //for (String item : decodedItems) System.out.print(item + " | ");
 
-        ArrayList<String> set = new ArrayList<>();
+        ArrayList<ArrayList<String>> t = allTransactions.ToString();
+        ArrayList<String> u = allTransactions.listOfUniqueItems();
 
-        Trie trie = new Trie();
+        ArrayList<ArrayList<String>> transactions = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            transactions.add(new ArrayList<>());
+        }
 
-        String[] group = new String[]{"a", "b"};
-        for (String g : group) { set.add(g); }
-        trie.insertSet(set); 
-        set.clear();
+        ArrayList<String> uniqueItems = new ArrayList<>();
 
-        group = new String[]{"b", "c", "d"};
-        for (String g : group) { set.add(g); }
-        trie.insertSet(set); 
-        set.clear();
+        String[] list1 = new String[]{"Bread", "Soup"};
+        String[] list2 = new String[]{"Apple", "Bread"};
+        String[] list3 = new String[]{"Bread", "Meat", "Salt"};
+        String[] list4 = new String[]{"Salt"};
+        String[] list5 = new String[]{"Salt", "Soup"};
 
-        group = new String[]{"a", "c", "d", "e"};
-        for (String g : group) { set.add(g); }
-        trie.insertSet(set); 
-        set.clear();
+        for (String item : list1) transactions.get(0).add(item);
+        for (String item : list2) transactions.get(1).add(item);
+        for (String item : list3) transactions.get(2).add(item);
+        for (String item : list4) transactions.get(3).add(item);
+        for (String item : list5) transactions.get(4).add(item);
 
-
-        System.out.println();
+        String[] items = new String[]{"Apple", "Bread", "Meat", "Salt", "Soup"};
         
+        for (String item : items) uniqueItems.add(item);
+
+        FPG fpg = new FPG(t, u);
+
+        fpg.start();
+
+
     }
 
 }

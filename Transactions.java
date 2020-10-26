@@ -19,7 +19,7 @@ public class Transactions {
     }
 
     // Returns the list of all the unique items in all the transactions (no repeats)
-    private ArrayList<String> listOfUniqueItems() {
+    public ArrayList<String> listOfUniqueItems() {
         // Stores the items here
         ArrayList<String> uniqueItems = new ArrayList<>();
 
