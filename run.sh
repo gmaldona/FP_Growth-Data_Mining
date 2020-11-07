@@ -26,15 +26,12 @@ fi
 
 if [[ -n $CONFIDENCE ]] && [[ -n $SUPPORT ]]
 then
-    echo "1"
     java Main "-s=$SUPPORT" "-c=$CONFIDENCE"
 
 elif [[ -n $CONFIDENCE ]]
 then
-    echo "2"
     java Main "-c=$CONFIDENCE"
 elif [[ -n $SUPPORT ]]
 then
-    echo "3"
     java Main "-s=$SUPPORT"
 fi
