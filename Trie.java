@@ -17,4 +17,16 @@ public class Trie {
         this.root.add(transaction);
     }
 
+    public ArrayList<Node> getNodeSet(ArrayList<String> items) {
+        return root.getNodeSet(items);
+    }
+
+    public ArrayList<Node> getPath(Node node) {
+        return node.getPath(node);
+    }
+
+    public Node find(Node leaf, String item) {
+        return leaf.find(item); 
+    }
+
 }
