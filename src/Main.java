@@ -61,6 +61,23 @@ public class Main {
         
         //for (String item : items) uniqueItems.add(item);
         FPG fpg = new FPG(t, u);
+        if (args.length > 0) {
+            Double minCofidence = null;
+            Double minSupport = null;
+            for (int i = 0; i < args.length; i++) {
+                //-c=
+                String command = args[i].substring(0, 2);
+                if (command.equals("-c")) {
+                    minCofidence = Double.parseDouble(args[i].substring(3));
+                }
+                else if (command.equals("-s")) {
+                    minSupport = Double.parseDouble(args[i].substring(3));
+                }
+
+            }
+            if (minCofidence != null) { fpg.setMinCofidence(minCofidence); }
+            if (minSupport != null) { fpg.setMinSupport(minSupport); }
+        }
         //FPG fpg = new FPG(transactions, uniqueItems);
         fpg.start();
     
