@@ -6,8 +6,8 @@ public abstract class Miner {
     
     private int totalNumberOfTransactions = 14963;
     protected int minSupportCount = 1000;
-    protected double minSupport = 0.01;
-    protected double minConfidence = 0.5;
+    protected double minSupport = 1;
+    protected double minConfidence = 1;
 
     public int calculateSupportCount(String item, ArrayList<ArrayList<String>> transactions) {
 
