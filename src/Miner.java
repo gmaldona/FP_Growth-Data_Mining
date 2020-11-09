@@ -35,7 +35,7 @@ public abstract class Miner {
     public int calculateCount(ArrayList<String> A, ArrayList<String> B, ArrayList<ArrayList<String>> transactions) {
 
         Set<String> AB = new LinkedHashSet<>(A);
-        AB.addAll(A);
+        AB.addAll(B);
         ArrayList<String> set = new ArrayList<>(AB);
         return calculateSupportCount(set, transactions);
 
