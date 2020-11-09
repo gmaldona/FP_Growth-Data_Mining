@@ -19,59 +19,58 @@ The Algorithm breakdown and explanation can be found [here](https://www-users.cs
 
 ```shell
 Programming Assignment 2 gregory$ ./run.sh 
-
 [rolls/buns]->[whole milk]
-Count: 1646 | Support: 1.3967787208447504 | Confidence: 12.697448359659782
+Count: 209 | Support: 1.3967787208447504 | Confidence: 12.697448359659782
 
 [whole milk]->[rolls/buns]
-Count: 2363 | Support: 1.3967787208447504 | Confidence: 8.844688954718578
+Count: 209 | Support: 1.3967787208447504 | Confidence: 8.844688954718578
 
 [soda]->[whole milk]
-Count: 1453 | Support: 1.1628684087415626 | Confidence: 11.97522367515485
+Count: 174 | Support: 1.1628684087415626 | Confidence: 11.97522367515485
 
 [whole milk]->[soda]
-Count: 2363 | Support: 1.1628684087415626 | Confidence: 7.363520947947524
+Count: 174 | Support: 1.1628684087415626 | Confidence: 7.363520947947524
 
 [whole milk]->[yogurt]
-Count: 2363 | Support: 1.116086346320925 | Confidence: 7.0672873465933135
+Count: 167 | Support: 1.116086346320925 | Confidence: 7.0672873465933135
 
 [yogurt]->[whole milk]
-Count: 1285 | Support: 1.116086346320925 | Confidence: 12.996108949416344
+Count: 167 | Support: 1.116086346320925 | Confidence: 12.996108949416344
 
 [other vegetables]->[whole milk]
-Count: 1827 | Support: 1.4836596939116486 | Confidence: 12.151067323481117
+Count: 222 | Support: 1.4836596939116486 | Confidence: 12.151067323481117
 
 [whole milk]->[other vegetables]
-Count: 2363 | Support: 1.4836596939116486 | Confidence: 9.394837071519255
+Count: 222 | Support: 1.4836596939116486 | Confidence: 9.394837071519255
 
 [other vegetables]->[rolls/buns]
-Count: 1827 | Support: 1.0559379803515339 | Confidence: 8.648056923918993
+Count: 158 | Support: 1.0559379803515339 | Confidence: 8.648056923918993
 
 [rolls/buns]->[other vegetables]
-Count: 1646 | Support: 1.0559379803515339 | Confidence: 9.59902794653706
+Count: 158 | Support: 1.0559379803515339 | Confidence: 9.59902794653706
 
 [whole milk]->[rolls/buns]
-Count: 2363 | Support: 1.3967787208447504 | Confidence: 8.844688954718578
+Count: 209 | Support: 1.3967787208447504 | Confidence: 8.844688954718578
 
 [rolls/buns]->[whole milk]
-Count: 1646 | Support: 1.3967787208447504 | Confidence: 12.697448359659782
+Count: 209 | Support: 1.3967787208447504 | Confidence: 12.697448359659782
 
 [other vegetables]->[rolls/buns]
-Count: 1827 | Support: 1.0559379803515339 | Confidence: 8.648056923918993
+Count: 158 | Support: 1.0559379803515339 | Confidence: 8.648056923918993
 
 [rolls/buns]->[other vegetables]
-Count: 1646 | Support: 1.0559379803515339 | Confidence: 9.59902794653706
+Count: 158 | Support: 1.0559379803515339 | Confidence: 9.59902794653706
 
 [other vegetables]->[whole milk]
-Count: 1827 | Support: 1.4836596939116486 | Confidence: 12.151067323481117
+Count: 222 | Support: 1.4836596939116486 | Confidence: 12.151067323481117
 
 [whole milk]->[other vegetables]
-Count: 2363 | Support: 1.4836596939116486 | Confidence: 9.394837071519255
+Count: 222 | Support: 1.4836596939116486 | Confidence: 9.394837071519255
 
 [whole milk]->[soda]
-Count: 2363 | Support: 1.1628684087415626 | Confidence: 7.363520947947524
+Count: 174 | Support: 1.1628684087415626 | Confidence: 7.363520947947524
 
 [soda]->[whole milk]
-Count: 1453 | Support: 1.1628684087415626 | Confidence: 11.97522367515485
+Count: 174 | Support: 1.1628684087415626 | Confidence: 11.97522367515485
 ```
 
