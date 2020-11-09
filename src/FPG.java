@@ -58,7 +58,6 @@ public class FPG extends Miner {
         getAssociateRules();
         
     }   
-    
     /**
     * <h1> Support Count Method </h1>
     *
@@ -452,8 +451,6 @@ public class FPG extends Miner {
             }
             Node node = conditionalFPTreeLeaves.get(key).getFirst();
 
-            //ArrayList<Object[]> patterns = new ArrayList<>();
-            //ArrayList<String> patterns = 
             ArrayList<ArrayList<String>> subsets = new ArrayList<>();
             do {
                 ArrayList<Node> nodePath = fp.getPath(node);

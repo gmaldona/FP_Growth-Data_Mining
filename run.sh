@@ -24,6 +24,8 @@ then
     SUPPORT=$4
 fi
 
+clear
+
 if [[ -n $CONFIDENCE ]] && [[ -n $SUPPORT ]]
 then
     java Main "-s=$SUPPORT" "-c=$CONFIDENCE"
